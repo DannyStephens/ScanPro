@@ -3,6 +3,7 @@ import os
 import sys
 from datetime import datetime
 
+
 def run_nmap(ip):
     timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
     out_dir = "scan_results"
@@ -18,9 +19,10 @@ def run_nmap(ip):
 
     print(f"[+] Scan complete. Output saved to: {outfile}")
 
+
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python3 scanpro.py <IP_OR_DOMAIN>")
+        print("INCORRECT INPUT. Corrected Input: python3 scanpro.py <IP_OR_DOMAIN>")
         sys.exit(1)
 
     target = sys.argv[1].strip()
